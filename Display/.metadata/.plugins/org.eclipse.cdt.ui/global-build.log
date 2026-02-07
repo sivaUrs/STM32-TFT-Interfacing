@@ -1,0 +1,168 @@
+15:52:10 **** Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1160	      0	   1568	   2728	    aa8	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+01:07:54 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	      0	   1568	   2808	    af8	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:08:30 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1240	      0	   1568	   2808	    af8	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+01:18:52 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1264	      0	   1568	   2832	    b10	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:24:34 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1268	      0	   1568	   2836	    b14	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:46:05 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1280	      0	   1568	   2848	    b20	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:46:40 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1280	      0	   1568	   2848	    b20	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:50:12 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1276	      0	   1568	   2844	    b1c	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+01:53:42 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1280	      0	   1568	   2848	    b20	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+02:05:03 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1276	      0	   1568	   2844	    b1c	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+02:11:34 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1280	      0	   1568	   2848	    b20	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+02:14:11 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1280	      0	   1568	   2848	    b20	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
+02:15:48 **** Incremental Build of configuration Debug for project 001_Vibgyor_bars ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_Vibgyor_bars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Sivaprakash\STM32CubeIDE\Display\001_Vibgyor_bars\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Vibgyor_bars.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Vibgyor_bars.elf
+ 
+arm-none-eabi-size  001_Vibgyor_bars.elf 
+arm-none-eabi-objdump -h -S 001_Vibgyor_bars.elf  > "001_Vibgyor_bars.list"
+   text	   data	    bss	    dec	    hex	filename
+   1276	      0	   1568	   2844	    b1c	001_Vibgyor_bars.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_Vibgyor_bars.list
+ 
