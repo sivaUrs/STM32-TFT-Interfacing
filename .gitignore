@@ -1,0 +1,19 @@
+# Build output
+Debug/
+Release/
+
+# Object and binary files
+*.o
+*.d
+*.su
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+
+# IDE local state
+.metadata/
+.settings/language.settings.xml
+.metadata/
+.metadata/

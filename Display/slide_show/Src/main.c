@@ -23,25 +23,36 @@
 #endif
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "stm32f407xx.h"
 #include "reg_util.h"
 #include "bsp_lcd.h"
 
 
 extern lcd_context_t g_lcd_context;
-
+extern const uint8_t iniyaal[240*308*2];
+extern const uint8_t pavithiran[240*308*2];
 
 void SystemClockSetup();
-void LCD_fill_display_with_vibgyor();
 void LCD_display_portrait_image_whole_screen(const uint8_t *image, size_t size_in_bytes);
 void LCD_display_portrait_image_in_landscape_mode(const uint8_t *image, const uint16_t img_w, const uint16_t img_h );
 void LCD_display_portrait_bottom_up(const uint8_t *image, const uint16_t img_w, const uint16_t img_h);
 void LCD_display_portrait_top_bottom(const uint8_t *image, const uint16_t img_w, const uint16_t img_h);
 
 
+void delay()
+{
+	unsigned int i;
+	for(i = 0; i < 2000000; i++);
+	for(i = 0; i < 2000000; i++);
+	for(i = 0; i < 2000000; i++);
+}
+
+
 int main(void)
 {
 	unsigned int i;
+	bool slide_from_top = true; // true - from top, false - from bottom
 
 	SystemClockSetup();
 
@@ -51,9 +62,6 @@ int main(void)
 
 	LCD_set_orientation(&g_lcd_context);
 
-
-	LCD_fill_display_with_vibgyor();
-
 	for(i = 0; i < 2000000; i++);
 
 
@@ -62,7 +70,19 @@ int main(void)
 	GPIOD->MODER |= GPIO_MODER_MODER14_0; // Red LED, set pin 14 as output
 	GPIOD->MODER |= GPIO_MODER_MODER15_0; // Blue LED, set pin 15 as output
 
-//	LCD_set_background(&g_lcd_context, WHITE);
+	LCD_set_background(&g_lcd_context, WHITE);
+
+
+	LCD_display_portrait_image_whole_screen(iniyaal, sizeof(iniyaal));
+	delay();
+	g_lcd_context.ori.orientation = LANDSCAPE;
+	LCD_set_orientation(&g_lcd_context);
+	LCD_set_background(&g_lcd_context, WHITE);
+	LCD_display_portrait_image_in_landscape_mode(iniyaal, 240, 308);
+	delay();
+
+	g_lcd_context.ori.orientation = PORTRAIT;
+	LCD_set_orientation(&g_lcd_context);
 
     /* Loop forever */
 	for(;;){
@@ -73,13 +93,12 @@ int main(void)
 		GPIOD->BSRR |= 1<<14; // Set the BSRR bit 14 to 1 to turn respective LED on
 		GPIOD->BSRR |= 1<<15; // Set the BSRR bit 15 to 1 to turn respective LED on
 
+		if(!slide_from_top)
+			LCD_display_portrait_top_bottom(iniyaal, 240, 308);
+		else
+			LCD_display_portrait_bottom_up(iniyaal, 240, 308);
 
-		// Delay
-		for(i = 0; i < 2000000; i++);
-		// Delay
-		for(i = 0; i < 2000000; i++);
-		// Delay
-		for(i = 0; i < 2000000; i++);
+		delay();
 
 		// Turn off LEDs
 		GPIOD->BSRR |= 1<<(12+16); // Set the BSRR bit 12 + 16 to 1 to turn respective LED off
@@ -87,13 +106,15 @@ int main(void)
 		GPIOD->BSRR |= 1<<(14+16); // Set the BSRR bit 14 + 16 to 1 to turn respective LED off
 		GPIOD->BSRR |= 1<<(15+16); // Set the BSRR bit 15 + 16 to 1 to turn respective LED off
 
+		if(!slide_from_top)
+			LCD_display_portrait_top_bottom(pavithiran, 240, 308);
+		else
+			LCD_display_portrait_bottom_up(pavithiran, 240, 308);
 
-		// Delay
-		for(i = 0; i < 2000000; i++);
-		// Delay
-		for(i = 0; i < 2000000; i++);
-		// Delay
-		for(i = 0; i < 2000000; i++);
+
+		slide_from_top = !slide_from_top;
+
+		delay();
 	}
 }
 
@@ -189,7 +210,6 @@ void LCD_display_portrait_bottom_up(const uint8_t *image, const uint16_t img_w, 
 	uint16_t step = 200;
 	uint8_t height_step_size = PORTRAIT_ACTIVE_HEIGHT/step;
 	uint8_t remainder_10s = PORTRAIT_ACTIVE_HEIGHT%step;
-//	uint32_t remainder_1s = remainder_10s % height_step_size;
 	uint32_t image_size_in_pixels = 0;
 	uint16_t i;
 	g_lcd_context.ori.orientation = PORTRAIT;
@@ -254,51 +274,4 @@ void LCD_display_portrait_image_whole_screen(const uint8_t *image,  size_t size_
 	g_lcd_context.area.y2.whole = PORTRAIT_ACTIVE_HEIGHT - 1;
 
 	LCD_display_image(image, size_in_bytes/2, (const lcd_context_t *)&g_lcd_context);
-}
-
-void LCD_fill_display_with_vibgyor()
-{
-	uint16_t height = 0, width = 0,total_height=0;
-	uint8_t i;
-	lcd_area_t area = {0};
-	word y1={0};
-	COLOR colors[7] = {VIOLET, INDIGO, BLUE, GREEN, YELLOW, ORANGE, RED};
-
-	if(g_lcd_context.ori.orientation == PORTRAIT)
-	{
-		total_height = PORTRAIT_ACTIVE_HEIGHT;
-		height = (PORTRAIT_ACTIVE_HEIGHT/7);
-		width  =  PORTRAIT_ACTIVE_WIDTH-1;
-	}
-	else if(g_lcd_context.ori.orientation == LANDSCAPE)
-	{
-		total_height = LANDSCAPE_ACTIVE_HEIGHT;
-		height = (LANDSCAPE_ACTIVE_HEIGHT/7);
-		width  =  LANDSCAPE_ACTIVE_WIDTH-1;
-	}
-
-	for(i = 0; i < 7; i++ )
-	{
-		area.x1.whole = 0;
-		area.y1.whole = y1.whole;
-
-		area.x2.whole =  width;
-		area.y2.whole =  (y1.whole + height)-1;
-
-		LCD_display_area_set(&area);
-		LCD_fill_background(&area,colors[i]);
-
-		y1.whole = y1.whole + height;
-	}
-
-	if(y1.whole < total_height)
-	{
-		area.x1.whole = 0;
-		area.y1.whole = y1.whole;
-		area.x2.whole = width;
-		area.y2.whole = total_height-1;
-
-		LCD_display_area_set(&area);
-		LCD_fill_background(&area,colors[i]);
-	}
 }
