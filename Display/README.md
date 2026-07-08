@@ -28,21 +28,21 @@ A register-level display driver and graphics projects for the **STM32F407VG** mi
 |---|---|
 | MCU board | STM32F407 Discovery (STM32F407VGT6, Cortex-M4 @ 168 MHz) |
 | Display | ILI9341-based TFT LCD, 240×320 |
-| Interface | SPI <!-- adjust: SPI/8080 parallel, which SPI instance, DMA yes/no --> |
+| Interface | SPI2 (polling, up to 21 MHz — APB1 42 MHz / 2) |
 | Debug probe | On-board ST-LINK |
 
 ### Wiring
 
-<!-- Fill in your actual pin mapping -->
-
 | ILI9341 pin | STM32 pin | Function |
 |---|---|---|
-| SCK | Pxx | SPI clock |
-| MOSI | Pxx | SPI data |
-| CS | Pxx | Chip select |
-| D/C | Pxx | Data/Command select |
-| RESET | Pxx | Panel reset |
-| BLK | Pxx | Backlight |
+| SCK | PB13 | SPI2 clock |
+| SDI (MOSI) | PB15 | SPI2 data out (MCU → LCD) |
+| SDO (MISO) | PC2 | SPI2 data in (LCD → MCU) |
+| CSX | PD11 | Chip select |
+| DCX | PD9 | Data/Command select |
+| RESX | PD10 | Panel reset |
+
+Pin assignments are defined in `bsp_lcd/Inc/bsp_lcd.h` (`LCD_*_PIN` / `LCD_*_PORT` macros).
 
 ## Repository structure
 
