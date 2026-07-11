@@ -4,16 +4,15 @@ A register-level display driver and graphics projects for the **STM32F407VG** mi
 
 ## 🎬 Demo
 
-<!-- Drag & drop your .mp4 demo videos here while editing this README on GitHub.
-     GitHub will upload them and embed an inline video player. Put the best one first. -->
-
 *Slideshow application cycling images on the ILI9341 panel:*
 
-[demo video here]
+<img src="output_video/slide_show.gif" width="240" alt="Slideshow demo on ILI9341"/>
 
 *VIBGYOR color-bar test pattern:*
 
-[demo video here]
+<img src="output_video/vibgyor_bar.gif" width="240" alt="VIBGYOR color bars on ILI9341"/>
+
+Full-quality recordings: [slide_show.mp4](output_video/slide_show.mp4) · [vibgyor_bar.mp4](output_video/vibgyor_bar.mp4)
 
 ## Highlights
 
