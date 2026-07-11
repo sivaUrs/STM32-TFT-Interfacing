@@ -12,8 +12,6 @@ A register-level display driver and graphics projects for the **STM32F407VG** mi
 
 <img src="output_video/vibgyor_bar.gif" width="240" alt="VIBGYOR color bars on ILI9341"/>
 
-Full-quality recordings: [slide_show.mp4](output_video/slide_show.mp4) · [vibgyor_bar.mp4](output_video/vibgyor_bar.mp4)
-
 ## Highlights
 
 - **No HAL, no CMSIS device pack** — peripheral access is done through a hand-written device header (`common/stm32f407xx.h`) and register-manipulation utilities (`common/reg_util.h`), built directly from the STM32F407 reference manual (RM0090).
